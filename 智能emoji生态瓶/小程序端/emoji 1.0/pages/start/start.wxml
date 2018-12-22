@@ -1,0 +1,19 @@
+<!--start.wxml-->
+
+<button class="btn1" bindtap="getDataFromOneNet">
+emoji生态瓶</button>
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <label style="display: flex"  wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+<input id="input" placeholder="" 
+placeholder-style="font-size:15px; color:#bfbfbf;" 
+style="font-weight:bolder; font-size:15px; color:#000000; padding-left: 30rpx"
+  bindinput="change"/>
+
+<text id="text">在这里查看生态瓶的情况吧~          点击上方emoji生态瓶按钮</text>
+<button id="btn3" style="opacity: {{opacity}}" 
+disabled="{{disabled}}" bindtap="send"></button>
